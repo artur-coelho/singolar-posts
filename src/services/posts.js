@@ -33,6 +33,17 @@ class PostService {
         .catch((err) => reject(err));
     });
   }
+
+  createPost(data) {
+    return new Promise((resolve, reject) => {
+      axios
+        .post('/posts', data)
+        .then((response) => {
+          resolve(response.data);
+        })
+        .catch((err) => reject(err));
+    });
+  }
 }
 
 export default new PostService();
