@@ -6,18 +6,18 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
-export default function AlertDialog(props) {
+const ConfirmDialog = (props) => {
   return (
     <div>
       <Dialog
         open={props.open}
         onClose={props.onClose}
-        aria-labelledby='alert-dialog-title'
-        aria-describedby='alert-dialog-description'
+        aria-labelledby='confirm-dialog-title'
+        aria-describedby='confirm-dialog-description'
       >
-        <DialogTitle id='alert-dialog-title'>{props.title}</DialogTitle>
+        <DialogTitle id='confirm-dialog-title'>{props.title}</DialogTitle>
         <DialogContent>
-          <DialogContentText id='alert-dialog-description'>
+          <DialogContentText id='confirm-dialog-description'>
             {props.text}
           </DialogContentText>
         </DialogContent>
@@ -30,4 +30,6 @@ export default function AlertDialog(props) {
       </Dialog>
     </div>
   );
-}
+};
+
+export default ConfirmDialog;
