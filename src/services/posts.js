@@ -23,10 +23,10 @@ class PostService {
     });
   }
 
-  updatePost(userId) {
+  updatePost(userId, payload) {
     return new Promise((resolve, reject) => {
       axios
-        .put(`posts/${userId}`)
+        .put(`posts/${userId}`, payload)
         .then((response) => {
           resolve(response.data);
         })
