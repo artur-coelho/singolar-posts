@@ -1,0 +1,7 @@
+.postCard {
+    margin: 1rem;
+}
+
+.cardActions {
+    justify-content: space-between;
+}
